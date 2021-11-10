@@ -5,7 +5,7 @@
  * @package Aquila
  */
 ?>
-<Footer>Footer</Footer>
+<Footer></Footer>
 </div>
 </div>
 
