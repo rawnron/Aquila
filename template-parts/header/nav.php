@@ -17,12 +17,13 @@
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <?php 
+  <div class="container">
+  <?php 
     if ( function_exists( 'the_custom_logo' ) ) {
       the_custom_logo();
     }
     ?>
+  <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -43,7 +44,7 @@
                 if ( ! $has_children ) {
                   ?>
               <li class="nav-item">
-                <a class="nav-link" href="<?php esc_url( $menu_item->url ); ?>">
+                <a class="nav-link" href="<?php echo esc_url( $menu_item->url ); ?>">
                   <?php  echo esc_html( $menu_item->title ); ?>
                 </a>
               </li>
@@ -51,7 +52,7 @@
                 } else {
                   ?>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="<?php esc_url( $menu_item->url ); ?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="<?php echo esc_url( $menu_item->url ); ?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?php  echo esc_html( $menu_item->title ); ?>
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -73,9 +74,9 @@
                   <?php
                 }
 
-                //echo '<pre>';
-                //print_r( $child_menu_items );
-                //wp_die();
+               //echo '<pre>';
+               //print_r( $child_menu_items );
+              //wp_die();
 
                 ?>
 
@@ -93,6 +94,7 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
+  </div>
   </div>
 </nav>
 
