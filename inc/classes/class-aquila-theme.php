@@ -21,6 +21,7 @@ class AQUILA_THEME {
 
         Assets::get_instance();
         Menus::get_instance();
+        Meta_Boxes::get_instance();
 
         $this->setup_hooks();
     }
@@ -31,8 +32,6 @@ class AQUILA_THEME {
          */
         add_action( 'after_setup_theme', [ $this, 'setup_theme'] );
 
-        add_action( 'wp_enqueue_scripts', [ $this, 'register_styles' ]);
-        add_action( 'wp_enqueue_scripts', [ $this, 'register_scripts' ]);
     }
 
     public function setup_theme() {
@@ -42,7 +41,7 @@ class AQUILA_THEME {
         'width'                => 400,
         'flex-height'          => true,
         'flex-width'           => true,
-        'header-text'          => [ 'site-title', 'site-description' ],
+        'header-text'          => [ 'site-title', 's    ite-description' ],
         'unlink-homepage-logo' => true,
         ] );
 
@@ -53,6 +52,8 @@ class AQUILA_THEME {
         ] );
 
         add_theme_support( 'post-thumbnails' );
+
+        add_image_size( 'featured-thumbnail', 336, 200, true );
 
         add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -82,25 +83,6 @@ class AQUILA_THEME {
         }
     }
 
-    public function register_styles() {
-    // Register Styles.
-    wp_register_style( 'style-css', get_stylesheet_uri(), [], filemtime( AQUILA_DIR_PATH . '/style.css' ), 'all' );
-    wp_register_style( 'bootstrap-css', AQUILA_DIR_URI . '/assets/src/library/css/bootstrap.min.css', [], false, 'all' );
-        
-    //Enqueue Styles
-    wp_enqueue_style( 'style-css' );
-    wp_enqueue_style( 'bootstrap-css' );
-}
-
-    public function register_scripts() {
-    // Register Scripts.
-    wp_register_script( 'main-js', get_template_directory_uri() . '/assets/main.js', [], filemtime( get_template_directory() . '/assets/main.js' ), true );
-    wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/assets/src/library/js/bootstrap.min.js', ['jquery'], false, true );
-
-    //Enqueue Scripts
-    wp_enqueue_script( 'main-js' );
-    wp_enqueue_script( 'bootstrap-js' );
-    }
 }
 
 ?>

@@ -10,7 +10,7 @@ get_header();
 <div id="primary">
     <main id="main" class="site-main mt-5" role="main">
         <?php
-        if ( have_posts() ) {
+        if ( have_posts() ) :
             ?>
             <div class="container">
                 <?php 
@@ -24,7 +24,6 @@ get_header();
                       <?php  
                     }
                 ?>
-
                 <div class="row">
                     <?php
                     $index = 0;
@@ -41,7 +40,7 @@ get_header();
                         }
                         ?>
                         <div class="col">
-                            <?php get_template_part( 'template_parts/content' ); ?>
+                            <?php get_template_part( 'template-parts/content' ); ?>
                         </div>
                         <?php
                         $index ++;
@@ -58,7 +57,14 @@ get_header();
                 </div>
             </div>
             <?php
-        }
+            else :
+
+            get_template_part( 'template-parts/content-none' );
+
+        endif;
+
+        get_template_part( 'template-parts/content-none' );
+
         ?>
     </main>
 </div>
