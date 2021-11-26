@@ -7,7 +7,7 @@
 
 namespace AQUILA_THEME\Inc;
 
-
+use AQUILA_THEME\Inc\Sidebars;
 use AQUILA_THEME\Inc\Traits\Singleton;
 
 class AQUILA_THEME {
@@ -15,13 +15,15 @@ class AQUILA_THEME {
 
     protected function __construct() {
 
-//wp_die('Eugene');
+//wp_die('Eugene bobo');
         
         //load class.
 
         Assets::get_instance();
         Menus::get_instance();
         Meta_Boxes::get_instance();
+        Sidebars::get_instance();
+        Clock_Widget::get_instance();
 
         $this->setup_hooks();
     }

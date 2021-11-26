@@ -20,3 +20,28 @@ img {
     width: 100%;
     height: auto;
 }
+
+/* Entry meta */
+.updated:not(.published) {
+    display: none;
+}
+
+/* Nav item */
+.nav-item:hover .dropdown-menu:not(.show) {
+    display: block;
+}
+
+/* Custom CSS */
+.entry-footer-link, .text-dark, .aquila-read-more, .au, .date {
+    text-decoration: none;
+}
+
+.entry-footer-link:hover, .text-dark:hover, .aquila-read-more:hover, .au:hover, .date:hover {
+    text-decoration: underline;
+}
+
+/* Pagination */
+.page-numbers.current > span {
+    background-color: gray;
+    color: #fff;
+}

@@ -63,7 +63,7 @@ get_header();
 
         endif;
 
-        get_template_part( 'template-parts/content-none' );
+            aquila_pagination();
 
         ?>
     </main>

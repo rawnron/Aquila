@@ -6,7 +6,6 @@
  */
 
 
-
 if ( ! defined( 'AQUILA_DIR_PATH' ) ) {
 	define( 'AQUILA_DIR_PATH', untrailingslashit( get_template_directory() ) );
 }
@@ -29,14 +28,10 @@ function aquila_get_theme_instance() {
 aquila_get_theme_instance();
 
 function aquila_enqueue_scripts() {
-    
-
-
-
-
-    
+       
 }
 
 add_action( 'wp_enqueue_scripts', 'aquila_enqueue_scripts');
+
 
 ?>
