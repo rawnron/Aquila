@@ -44,6 +44,15 @@ class Clock_Widget extends WP_Widget {
         if ( ! empty( $title ) ) {
             echo $before_title . $title . $after_title;
         }
+        ?>
+        <section class="card">
+            <div class="clock card-body">
+                <span id="time"></span>
+                <span id="ampm"></span>
+                <span id="time-emoji"></span>
+            </div>
+        </section>
+        <?php 
         echo $after_widget;
     }
  
