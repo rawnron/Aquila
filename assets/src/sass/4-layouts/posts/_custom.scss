@@ -1,0 +1,8 @@
+/* Custom CSS */
+.entry-footer-link, .text-dark, .aquila-read-more, .au, .date {
+    text-decoration: none;
+}
+
+.entry-footer-link:hover, .text-dark:hover, .aquila-read-more:hover, .au:hover, .date:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,15 @@
+.home-page-wrap {
+    .entry-content {
+
+        & > * {
+            margin: $margin-top auto $margin-buttom auto;
+        }
+        & > *:not(.alignfull):not(.alignwide) {
+            max-width: $site_width;
+            padding: 0 $padding-right 0 $padding-left;
+        }
+        & > .alignwide {
+            max-width: $wide_width;
+        }
+    }
+}
